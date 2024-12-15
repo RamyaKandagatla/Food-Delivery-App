@@ -1,0 +1,113 @@
+{
+    "info": {
+        "id": "410684",
+        "name": "Soul Rasa",
+        "cloudinaryImageId": "vt9jevkq2ddvjodkuhq3",
+        "locality": "Murugeshpalya",
+        "areaName": "Indiranagar",
+        "costForTwo": "₹400 for two",
+        "cuisines": [
+            "Indian",
+            "Healthy Food",
+            "Home Food",
+            "South Indian",
+            "North Indian"
+        ],
+        "avgRating": 4.4,
+        "feeDetails": {
+            "restaurantId": "410684",
+            "fees": [
+                {
+                    "name": "BASE_DISTANCE",
+                    "fee": 3100
+                },
+                {
+                    "name": "BASE_TIME"
+                },
+                {
+                    "name": "ANCILLARY_SURGE_FEE"
+                }
+            ],
+            "totalFee": 3100
+        },
+        "parentId": "239281",
+        "avgRatingString": "4.4",
+        "totalRatingsString": "5K+",
+        "sla": {
+            "deliveryTime": 23,
+            "lastMileTravel": 2.9,
+            "serviceability": "SERVICEABLE",
+            "slaString": "23 mins",
+            "lastMileTravelString": "2.9 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2023-10-28 23:30:00",
+            "opened": true
+        },
+        "badges": {
+            "imageBadges": [
+                {
+                    "imageId": "v1690360529/Ratnesh_Badges/Only_on_swiggy_badge_4x.png",
+                    "description": "OnlyOnSwiggy"
+                }
+            ],
+            "textExtendedBadges": [
+                {
+                    "iconId": "guiltfree/GF_Logo_android_3x",
+                    "shortDescription": "brand",
+                    "fontColor": "#7E808C"
+                }
+            ]
+        },
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "imageBased": {
+                    "badgeObject": [
+                        {
+                            "attributes": {
+                                "description": "OnlyOnSwiggy",
+                                "imageId": "v1690360529/Ratnesh_Badges/Only_on_swiggy_badge_4x.png"
+                            }
+                        }
+                    ]
+                },
+                "textBased": {},
+                "textExtendedBadges": {
+                    "badgeObject": [
+                        {
+                            "attributes": {
+                                "description": "",
+                                "fontColor": "#7E808C",
+                                "iconId": "guiltfree/GF_Logo_android_3x",
+                                "shortDescription": "brand"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "aggregatedDiscountInfoV3": {
+            "header": "60% OFF",
+            "subHeader": "UPTO ₹100"
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+        "link": "https://www.swiggy.com/restaurants/soul-rasa-murugeshpalya-indiranagar-bangalore-410684",
+        "type": "WEBLINK"
+    }
+}
