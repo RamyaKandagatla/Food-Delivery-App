@@ -19,7 +19,7 @@ const Body = () => {
 
   const fetchData = async () => {
     const response = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9622129&lng=77.64537949999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      "https://run.mocky.io/v3/0f1dd619-53c5-4531-abfd-e33c83aa6505"
     );
     const data = await response.json();
     setListOfRestuarants(
