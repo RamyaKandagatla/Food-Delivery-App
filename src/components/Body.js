@@ -19,7 +19,7 @@ const Body = () => {
 
   const fetchData = async () => {
     const response = await fetch(
-      "https://run.mocky.io/v3/0f1dd619-53c5-4531-abfd-e33c83aa6505"
+      "https://f425ede4-7bdf-432d-8e22-e92e5fa60abc.mock.pstmn.io"
     );
     const data = await response.json();
     setListOfRestuarants(
@@ -39,7 +39,9 @@ const Body = () => {
   const { loggedInUser, setUserName } = useContext(UserContext);
 
   return listOfRestuarants?.length === 0 ? (
-    <Shimmer />
+    <>
+      <Shimmer />
+    </>
   ) : (
     <div className="justify-center bg-gradient-to-b from-gray-800 to-orange-600">
       <div className="flex justify-center">

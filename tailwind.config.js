@@ -4,7 +4,15 @@ module.exports = {
     "./src/**/*.{html,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        shimmer: "#e0e0e0",
+      },
+      minHeight: {
+        '120': '30rem',
+        '144': '32rem',
+      },
+    },
     fontFamily: {
       signature: ["Great Vibes"]
     }
