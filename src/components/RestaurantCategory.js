@@ -1,25 +1,32 @@
 import React from "react";
 import ResList from "./ResList";
 
-const RestaurantCategory = (props) => {
-
-  const {data, showItem, setShowItem} = props;
-
-  const onHandleClick = () => {
-    setShowItem();
-  }
-
-  return <div className="my-4 p-2 mx-auto border bg-gray-100 shadow-lg rounded-md border-b-2
-    border-b-neutral-300 w-9/12 text-center">
-      <div className="justify-between text-start flex font-bold cursor-pointer" 
-        onClick={onHandleClick}>
-          <div className="text-lg">{data.title} ({data.itemCards.length})</div>
-          <div>⬇</div>
+const RestaurantCategory = ({ data, showItem, setShowItem }) => {
+  return (
+    <div className="my-4 p-4 mx-auto bg-white shadow-md rounded-lg w-full sm:w-10/12 md:w-9/12">
+      {/* Header: Title + Toggle Icon */}
+      <div
+        className="flex justify-between items-center cursor-pointer"
+        onClick={setShowItem}
+        role="button"
+        aria-expanded={showItem}
+      >
+        <h3 className="text-lg font-semibold text-gray-800">
+          {data.title} <span className="text-gray-500">({data.itemCards.length})</span>
+        </h3>
+        <span className={`transform transition-transform duration-300 ${showItem ? "rotate-180" : ""}`}>
+          ⬇
+        </span>
       </div>
-      {showItem && 
-        <ResList data={data.itemCards}/>
-      }
+
+      {/* Item List */}
+      {showItem && (
+        <div className="mt-4">
+          <ResList data={data.itemCards} />
+        </div>
+      )}
     </div>
-  }
+  );
+};
 
 export default RestaurantCategory;

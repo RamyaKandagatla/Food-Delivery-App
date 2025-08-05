@@ -1,7 +1,7 @@
 {
-  "name": "namasthereact",
+  "name": "food-delivery-app",
   "version": "1.0.0",
-  "description": "namaste react episode -5 ",
+  "description": "Food Delivery App using React, Redux, and Tailwind CSS",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",

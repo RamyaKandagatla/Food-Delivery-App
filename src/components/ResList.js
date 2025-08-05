@@ -1,40 +1,57 @@
 import { useDispatch } from 'react-redux';
-import {RES_LOGO} from '../utils/constants'
+import { RES_LOGO } from '../utils/constants';
 import { addItem } from '../utils/cartSlice';
 
-const ResList = (props) => {
-    const {data, cart} = props;
-    const dispatch = useDispatch();
+const ResList = ({ data, cart }) => {
+  const dispatch = useDispatch();
 
-    const handleAddClick = (item) => {
-        dispatch(addItem(item));
-    };
+  const handleAddClick = (item) => {
+    dispatch(addItem(item));
+  };
 
-    return (
-        <div>
-            {data.map((item) => (
-                <div className="border-b-2 border-b-gray-200 my-2 p-4 flex justify-between"
-                    key = {item.card.info.id}
-                    data-testid = "reslist">
-                    <div className='w-9/12'>
-                        <div className="text-start font-bold">{item.card.info.name}</div>
-                        <div className="text-start font-medium">₹ {item.card.info.price/100 || item.card.info.defaultPrice/100}</div>
-                        <p className='text-start text-xs'>{item.card.info.description}</p>
-                    </div>
-                    <div className='w-3/12 p-2'>
-                        <img className="rounded-lg" src={RES_LOGO + item.card.info.imageId}></img>
-                        {!cart && <button 
-                            className='absolute bg-white shadow-md p-2 -my-6 -mx-6 w-20 text-center text-sm 
-                            font-bold rounded-md text-green-600'
-                            onClick = {()=>handleAddClick(item)}
-                        >
-                            Add+
-                        </button>}
-                    </div>
-                </div>
-            ))}
-        </div>
-    )
-}
+  return (
+    <div className="space-y-4">
+      {data.map((item) => {
+        const { id, name, description, imageId, price, defaultPrice } = item.card.info;
+        const itemPrice = price || defaultPrice;
+
+        return (
+          <div
+            key={id}
+            className="border-b border-gray-300 pb-4 flex justify-between items-start gap-4"
+            data-testid="reslist"
+          >
+            {/* Text section */}
+            <div className="w-8/12 sm:w-9/12">
+              <h3 className="text-base font-semibold text-gray-800">{name}</h3>
+              <p className="text-sm text-gray-600 font-medium">₹ {itemPrice / 100}</p>
+              <p className="text-xs text-gray-500 mt-1">{description}</p>
+            </div>
+
+            {/* Image & button section */}
+            <div className="w-4/12 sm:w-3/12 relative flex flex-col items-center">
+              {imageId && (
+                <img
+                  src={RES_LOGO + imageId}
+                  alt={name}
+                  className="rounded-lg object-cover w-full h-24"
+                />
+              )}
+
+              {!cart && (
+                <button
+                  onClick={() => handleAddClick(item)}
+                  className="mt-2 bg-white border border-green-500 text-green-600 font-semibold text-sm px-3 py-1 rounded shadow-sm hover:bg-green-50 transition"
+                >
+                  Add +
+                </button>
+              )}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
 export default ResList;
