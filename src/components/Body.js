@@ -31,7 +31,15 @@ const Body = () => {
   const { loggedInUser, setUserName } = useContext(UserContext);
 
   if (onlineStatus === false) {
-    return <h1>You are offline!! Please check your internet connection!</h1>;
+    return (
+      <div className="flex items-center justify-center bg-gradient-to-b from-gray-800 to-orange-600 min-h-screen">
+        <h1 className="text-white text-3xl font-bold text-center px-4">
+          🚫 You are offline!!
+          <br />
+          Please check your internet connection!
+        </h1>
+      </div>
+    );
   }
 
   return listOfRestuarants?.length === 0 ? (
