@@ -12,6 +12,7 @@ import UserContext from "./utils/UserContext";
 import appStore from "./utils/appStore";
 import { Provider } from 'react-redux';
 import Cart from "./components/Cart";
+import Shimmer from "./components/Shimmer";
 
 const AppLayout = () => {
 
@@ -49,7 +50,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <Suspense fallback={<h1>Loading...</h1>}> <About /></Suspense>,
+        element: <Suspense fallback={<Shimmer/>}> <About /></Suspense>,
       },
       {
         path: "/contact",
@@ -57,7 +58,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/grocery",
-        element: <Suspense fallback={<h1>Loading...</h1>}><Grocery /></Suspense>,
+        element: <Suspense fallback={<Shimmer/>}><Grocery /></Suspense>,
       },
       {
         path: "/restaurant/:resId",
